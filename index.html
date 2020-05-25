@@ -1,20 +1,522 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Lotus AI</title>
-		<style>
-			body
-			{
-				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			}
-		</style>
-	</head>
-	<body>
-		<div style="text-align: center; margin-left: auto; margin-right: auto; max-width: 600px; width: auto;">
-			<img src="logo_title_transparent.png" style="height: auto; max-height: 200px; width: auto;">
-			<h1 style="margin-top: 128px;">Coming Soon</h1>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- Title -->
+    <title>Lotus AI - Landing</title>
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+	
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/lightcase.css">
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <!-- Styles End -->
+</head>
 
+<body id="top-page">
+
+    <!-- Preloader -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="first_object"></div>
+                <div class="object" id="second_object" style="float:right;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div id="mainNav" class="lotusai-main-menu-area animated">
+            <div class="container">
+                <div class="row m-0 align-items-center">
+                    <div class="col-lg-2 p-0 d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <a class="navbar-brand navbar-brand1 logo-image"><img src="assets/images/logos/lotus-ai-logo.svg" alt="logo"></a>
+                            <a class="navbar-brand navbar-brand2 logo-image"><img src="assets/images/logos/lotus-ai-logo-2.svg" alt="logo"></a>
+                        </div>
+                        <div class="menu-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="op-mobile-menu col-lg-10 p-0 d-lg-flex align-items-center justify-content-end">
+                        <div class="m-menu-header d-flex justify-content-between align-items-center d-lg-none">
+                            <a href="#" class="logo"><img src="assets/images/logos/lotus-ai-logo.svg" alt="logo"></a>
+                            <span class="close-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <ul class="custom-border-top nav-menu d-lg-flex flex-wrap list-unstyled mr_lg--50  mb-0 justify-content-center">
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#top-page"><span>Home</span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger active" href="#features"><span>Key features</span></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#benefits"><span>Benefits</span></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wedont"><span>What we don't do</span></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact"><span>Contact us</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Navigation End -->
+
+
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="banner-content d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="banner-text">
+                            <h1 class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">Smart Automated<br> Time Tracking.</h1>
+                            <p class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">Using AI to provide the balance between transparency of what’s being worked on and building timesheets automatically and accurately.</p>
+							<div class="custom-btn-group hover-effect-parent2 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
+								<a href="#subscribe" class="custom-btn-2 border-radius-30 hover-effect-child2 active mb-2 mb-lg-0 mr-lg-3">Subscribe</a>
+								<a href="#benefits" class="custom-btn border-radius-30 hover-effect-child2">Find out more</a>
+							</div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="banner-image-content d-flex align-items-center justify-content-center justify-content-lg-start">
+            <div class="banner-image pr--30 pl--30 pl-lg-0">
+                <div class="banner-image  wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <img class="img1" src="assets/images/banner/image-1.png" alt="image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Banner Section End -->
+
+
+
+    <!-- Key Features -->
+    <section id="features" class="feature-section roundShape1 pt--50 pb--100 pt_lg--50 pb_lg--100">
+        <div class="container">
+            <div class="section-header text-center pb--40">
+                <h3 class="pb--5 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">Key features</h3>
+            </div>
 			
+            <div class="row justify-content-center justify-content-lg-start">
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/transparent-icon.svg" alt="transparent icon">
+                        </div>
+						<h5>Transparent</h5>
+                        <p>Transparent productivity management; we’ve found the balance between teams and the organisation.</p>
+                    </div>
+                </div>
+				
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/lock-icon.svg" alt="lock icon">
+                        </div>
+                        <h5>Secure</h5>
+                        <p>Cloud based of data regionally held; you’re always in control of your data.</p>
+                    </div>
+                </div>
+				
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/wrench-icon.svg" alt="wrench icon">
+                        </div>
+                        <h5>Full Service</h5>
+                        <p>We aren’t just a product - we can also support you with process uplift and data quality management.</p>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="row justify-content-center justify-content-lg-start">
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/mouse-icon.svg" alt="mouse icon">
+                        </div>
+                        <h5>Easy To Use</h5>
+                        <p>No more clunky user experience.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/plug-icon.svg" alt="plug icon">
+                        </div>
+                        <h5>Export Data</h5>
+                        <p>Easy exports for upload into your existing systems for payroll, HR and more!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb--30 mb-lg-0 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="feature-item style2">
+                        <div class="icon">
+                            <img src="assets/images/icons/gantt-chart-icon.svg" alt="gantt chart icon">
+                        </div>
+                        <h5>Product Roadmap</h5>
+                        <p>A continuous roadmap to bring more powerful functions and additional features.</p>
+                    </div>
+                </div>
+            </div>
 		</div>
-	</body>
+    </section>
+    <!-- Key Features End -->
+
+
+
+    <!-- Benefits  -->
+    <section id="benefits" class="screenshot-section angleShape bg-ash-color pt--60 pb--60 pt_lg--70 pb_lg--70">
+        <div class="container position-relative pt--30 pb--30 pt_lg--50 pb_lg--50">
+            <div class="row">
+                <div class="col-lg-5 order-lg-last">
+                    <div class="screenshot-content text-center text-lg-left">
+                        <h3 class="mb-2 wow fadeInRight" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.2s">Overall benefits</h3><br><br>
+                        <div class="screenshot-info-container-style1 hover-effect-parent1 text-left">
+                            <div class="screenshot-info-item d-flex flex-wrap hover-effect-child1 wow fadeInRight" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
+								<div class="icon">
+									<img src="assets/images/icons/transparent-icon.svg" alt="transparent icon">
+								</div>
+                                <div class="content">
+                                    <h6 class="font-weight-bold mb-2 mt-0">Transparency</h6>
+                                    <p>Removing the level of manual time spent creating and managing timesheets.</p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-info-item d-flex flex-wrap hover-effect-child1 active wow fadeInRight" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.4s">
+								<div class="icon">
+									<img src="assets/images/icons/clock-icon.svg" alt="clock icon">
+								</div>
+                                <div class="content">
+                                    <h6 class="font-weight-bold mb-2 mt-0">Reduced admin time</h6>
+                                    <p>Removing the level of manual time spent creating and managing timesheets.</p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-info-item d-flex flex-wrap hover-effect-child1 wow fadeInRight" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.5s">
+								<div class="icon">
+									<img src="assets/images/icons/chart-icon.svg" alt="chart icon">
+								</div>
+                                <div class="content">
+                                    <h6 class="font-weight-bold mb-2 mt-0">Better accuracy on billable time</h6>
+                                    <p>Capturing the time spent on emails, in meetings and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="col-lg-7 order-lg-first pr_lg--100">
+                    <div class="screenshot-image image1 wow fadeInLeft" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <img src="assets/images/banner/image-2.png" alt="image">
+                    </div>
+                </div>    
+            </div>
+        </div>
+		<!-- What We Don't Do  -->
+        <div id="wedont" class="container position-relative pt--30 pb--100 pt_lg--30 pb_lg--100">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="screenshot-content text-center text-lg-left">
+                        <h3 class="mb-3 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.2s">What we don’t do</h3><br>
+                        <div class="screenshot-info-container-style2 text-left">
+                            <div class="screenshot-info-item-style2 d-flex flex-wrap hover-effect-child active wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="svg-icon">
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 21.825 21.781" style="enable-background:new 0 0 21.825 21.781;" xml:space="preserve">
+										
+										<path id="Path_1a" class="st0" d="M19.525,5.725c-0.5,0.2-0.6,0.8-0.4,1.2c0.6,1.2,0.9,2.6,0.9,4c0,5-4.1,9.1-9.1,9.1 s-9.1-4.1-9.1-9.1s4.1-9.1,9.1-9.1c2.1,0,4.1,0.7,5.7,2c0.4,0.3,0.9,0.3,1.3-0.1s0.3-0.9-0.1-1.3c0,0-0.1,0-0.1-0.1 c-4.8-3.7-11.7-2.9-15.4,1.8s-2.9,11.6,1.8,15.3s11.6,3,15.3-1.8c1.5-1.9,2.4-4.3,2.4-6.8c0-1.7-0.4-3.3-1.1-4.7 C20.525,5.725,19.925,5.625,19.525,5.725z"/>
+
+										<g id="Group_1a" transform="translate(11.016 11.043)">
+											<g id="Group_1b">
+												<path id="Path_1b" class="st0" d="M3.625,2.425l-2.5-2.5l2.5-2.5c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0l-2.6,2.5 l-2.5-2.5c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2l0,0l2.5,2.5l-2.5,2.5c-0.3,0.3-0.3,0.9,0,1.2s0.9,0.3,1.2,0l2.5-2.5l2.5,2.5 c0.3,0.3,0.9,0.3,1.2,0C3.925,3.325,3.925,2.825,3.625,2.425L3.625,2.425z"/>
+											</g>
+										</g>
+									</svg>
+                                </div>
+								
+                                <div class="content">
+                                    <p>Take screenshots</p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-info-item-style2 d-flex flex-wrap hover-effect-child active wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="svg-icon">
+									<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 21.825 21.781" style="enable-background:new 0 0 21.825 21.781;" xml:space="preserve">
+										
+										<path id="Path_2a" class="st0" d="M19.525,5.725c-0.5,0.2-0.6,0.8-0.4,1.2c0.6,1.2,0.9,2.6,0.9,4c0,5-4.1,9.1-9.1,9.1 s-9.1-4.1-9.1-9.1s4.1-9.1,9.1-9.1c2.1,0,4.1,0.7,5.7,2c0.4,0.3,0.9,0.3,1.3-0.1s0.3-0.9-0.1-1.3c0,0-0.1,0-0.1-0.1 c-4.8-3.7-11.7-2.9-15.4,1.8s-2.9,11.6,1.8,15.3s11.6,3,15.3-1.8c1.5-1.9,2.4-4.3,2.4-6.8c0-1.7-0.4-3.3-1.1-4.7 C20.525,5.725,19.925,5.625,19.525,5.725z"/>
+
+										<g id="Group_2a" transform="translate(11.016 11.043)">
+											<g id="Group_2b">
+												<path id="Path_2b" class="st0" d="M3.625,2.425l-2.5-2.5l2.5-2.5c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0l-2.6,2.5 l-2.5-2.5c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2l0,0l2.5,2.5l-2.5,2.5c-0.3,0.3-0.3,0.9,0,1.2s0.9,0.3,1.2,0l2.5-2.5l2.5,2.5 c0.3,0.3,0.9,0.3,1.2,0C3.925,3.325,3.925,2.825,3.625,2.425L3.625,2.425z"/>
+											</g>
+										</g>
+									</svg>
+                                </div>
+								
+                                <div class="content">
+                                    <p>Take photos of the user</p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-info-item-style2 d-flex flex-wrap hover-effect-child wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.6s">
+                                <div class="svg-icon">
+									<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 21.825 21.781" style="enable-background:new 0 0 21.825 21.781;" xml:space="preserve">
+										
+										<path id="Path_3a" class="st0" d="M19.525,5.725c-0.5,0.2-0.6,0.8-0.4,1.2c0.6,1.2,0.9,2.6,0.9,4c0,5-4.1,9.1-9.1,9.1 s-9.1-4.1-9.1-9.1s4.1-9.1,9.1-9.1c2.1,0,4.1,0.7,5.7,2c0.4,0.3,0.9,0.3,1.3-0.1s0.3-0.9-0.1-1.3c0,0-0.1,0-0.1-0.1 c-4.8-3.7-11.7-2.9-15.4,1.8s-2.9,11.6,1.8,15.3s11.6,3,15.3-1.8c1.5-1.9,2.4-4.3,2.4-6.8c0-1.7-0.4-3.3-1.1-4.7 C20.525,5.725,19.925,5.625,19.525,5.725z"/>
+
+										<g id="Group_3a" transform="translate(11.016 11.043)">
+											<g id="Group_3b">
+												<path id="Path_3b" class="st0" d="M3.625,2.425l-2.5-2.5l2.5-2.5c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0l-2.6,2.5 l-2.5-2.5c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2l0,0l2.5,2.5l-2.5,2.5c-0.3,0.3-0.3,0.9,0,1.2s0.9,0.3,1.2,0l2.5-2.5l2.5,2.5 c0.3,0.3,0.9,0.3,1.2,0C3.925,3.325,3.925,2.825,3.625,2.425L3.625,2.425z"/>
+											</g>
+										</g>
+									</svg>
+                                </div>
+								
+                                <div class="content">
+                                    <p>Track key strokes</p>
+                                </div>
+                            </div>
+							
+                            <div class="screenshot-info-item-style2 d-flex flex-wrap hover-effect-child active wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="svg-icon">
+									<svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 21.825 21.781" style="enable-background:new 0 0 21.825 21.781;" xml:space="preserve">
+										
+										<path id="Path_4a" class="st0" d="M19.525,5.725c-0.5,0.2-0.6,0.8-0.4,1.2c0.6,1.2,0.9,2.6,0.9,4c0,5-4.1,9.1-9.1,9.1 s-9.1-4.1-9.1-9.1s4.1-9.1,9.1-9.1c2.1,0,4.1,0.7,5.7,2c0.4,0.3,0.9,0.3,1.3-0.1s0.3-0.9-0.1-1.3c0,0-0.1,0-0.1-0.1 c-4.8-3.7-11.7-2.9-15.4,1.8s-2.9,11.6,1.8,15.3s11.6,3,15.3-1.8c1.5-1.9,2.4-4.3,2.4-6.8c0-1.7-0.4-3.3-1.1-4.7 C20.525,5.725,19.925,5.625,19.525,5.725z"/>
+
+										<g id="Group_4a" transform="translate(11.016 11.043)">
+											<g id="Group_4b">
+												<path id="Path_4b" class="st0" d="M3.625,2.425l-2.5-2.5l2.5-2.5c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0l-2.6,2.5 l-2.5-2.5c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2l0,0l2.5,2.5l-2.5,2.5c-0.3,0.3-0.3,0.9,0,1.2s0.9,0.3,1.2,0l2.5-2.5l2.5,2.5 c0.3,0.3,0.9,0.3,1.2,0C3.925,3.325,3.925,2.825,3.625,2.425L3.625,2.425z"/>
+											</g>
+										</g>
+									</svg>
+                                </div>
+								
+                                <div class="content">
+                                    <p>Track personal data</p>
+                                </div>
+                            </div>
+							
+                            <div class="screenshot-info-item-style2 d-flex flex-wrap hover-effect-child active wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="svg-icon">
+									<svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 21.825 21.781" style="enable-background:new 0 0 21.825 21.781;" xml:space="preserve">
+										
+										<path id="Path_5a" class="st0" d="M19.525,5.725c-0.5,0.2-0.6,0.8-0.4,1.2c0.6,1.2,0.9,2.6,0.9,4c0,5-4.1,9.1-9.1,9.1 s-9.1-4.1-9.1-9.1s4.1-9.1,9.1-9.1c2.1,0,4.1,0.7,5.7,2c0.4,0.3,0.9,0.3,1.3-0.1s0.3-0.9-0.1-1.3c0,0-0.1,0-0.1-0.1 c-4.8-3.7-11.7-2.9-15.4,1.8s-2.9,11.6,1.8,15.3s11.6,3,15.3-1.8c1.5-1.9,2.4-4.3,2.4-6.8c0-1.7-0.4-3.3-1.1-4.7 C20.525,5.725,19.925,5.625,19.525,5.725z"/>
+
+										<g id="Group_5a" transform="translate(11.016 11.043)">
+											<g id="Group_5b">
+												<path id="Path_5b" class="st0" d="M3.625,2.425l-2.5-2.5l2.5-2.5c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0l-2.6,2.5 l-2.5-2.5c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2l0,0l2.5,2.5l-2.5,2.5c-0.3,0.3-0.3,0.9,0,1.2s0.9,0.3,1.2,0l2.5-2.5l2.5,2.5 c0.3,0.3,0.9,0.3,1.2,0C3.925,3.325,3.925,2.825,3.625,2.425L3.625,2.425z"/>
+											</g>
+										</g>
+									</svg>
+                                </div>
+								
+                                <div class="content">
+                                    <p>Allow all data to be exposed beyond the user</p>
+                                </div>
+                            </div>
+							
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="col-lg-7 pl_lg--100">
+                    <div class="screenshot-image image2 wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <img src="assets/images/banner/image-2.png" alt="image">
+                    </div>
+                </div>    
+            </div>
+        </div>
+		<!-- What We Don't Do End  -->
+    </section>
+    <!-- Benefits End -->
+
+
+
+    <!-- Subscribe -->
+    <section id="subscribe" class="pt--100 pb--50">
+        <div class="container">
+            <div class="container-sm">
+                <div class="section-header text-center mb--60">
+                    <h3 class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">Subscribe to our mailing list</h3>
+                    <p class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">Keep updated on our launch, new features and other<br> updates from Lotus AI.</p>
+                </div>
+				<form class="justify-content-center form-inline wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
+					<div class="row subscribe-email-form">
+						<input type="email" name="email" placeholder="Email Address" required>						
+					</div>		
+					<button type="submit" class="subscribe-custom-btn" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>					
+				</form>
+            </div>
+        </div>
+    </section>
+		<!-- Subscribe Modal -->
+		<div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="subscribeModalLabel">Thank you for subscribing!</h5>
+			  </div>
+			  <div class="modal-body">
+				  <p>Thank you for subscribing. You will be the first to know about new releases, giveaways, and special projects. Stay tuned.</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>	
+		<!-- Subscribe Modal End -->
+    <!-- Subscribe End -->
+
+
+
+    <!-- Contact Us -->
+    <section id="contact" class="contact-section">
+        <div class="container roundShape2">
+            <div class="contact-wrapper">
+                <div class="section-header text-center mb--50">
+                    <h3>Contact us</h3>
+                </div>
+                <div class="contact">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-lg-6 mb--30 mb-lg-0">
+                                <input type="text" name="name" placeholder="*Name" required>
+                                <input type="email" name="email" placeholder="*Email" required>
+                                <input type="text" name="subject" placeholder="*Subject" required>
+                            </div>  
+                            <div class="col-lg-6">
+                                <textarea placeholder="*Massage" required></textarea>
+                            </div> 
+                            <div class="col-12 text-center pt--50">
+                                <button type="submit" input-type="submit" data-toggle="modal" data-target="#contactModal">Submit</button>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- Contact Modal -->
+		<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="contactModalLabel">Message sent!</h5>
+			  </div>
+			  <div class="modal-body">
+				  <p>Thank you for contacting us. One of our colleagues will get back in touch with you soon.</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>	
+		<!-- Contact Modal End -->
+    <!-- Contact Us End -->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top pt--100 pt_sm--120 pb--40 pb_lg--90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-widget text-center text-lg-left mb--30 mb-lg-0">
+                            <a class="footer-logo" ><img src="assets/images/logos/lotus-ai-logo-2.svg" alt="logo"></a>
+                            <ul class="footer-contact-info pl-0 list-unstyled">
+                                <li><a href="mailto:support@lotusai.co?Subject=Lotus%20AI%20Website" target="_top"><strong>Email:</strong> support@lotusai.co</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-4">
+                        <div class="footer-widget text-center text-lg-left mb--30 mb-lg-0">
+                            <h5 class="footer-title">About us</h5>
+							<p>Lotus AI provides smart automated<br> timesheets using AI to provide the balance<br> between transparency of what’s being worked<br> on and building timesheets automatically and accurately.</p>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-2">
+                        <div class="footer-widget text-center text-lg-left mb--30 mb-lg-0">
+                            <h5 class="footer-title">Explore</h5>
+                            <ul class="list-ustyled pl-0 pb-0 list-unstyled">
+                                <li><a href="#top-page">Home</a></li>
+                                <li><a href="#features">Key features</a></li>
+                                <li><a href="#benefits">Benefits</a></li>
+                                <li><a href="#wedont">What we don't do</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-2">
+                        <div class="footer-widget text-center text-lg-left mb--30 mb-lg-0">
+                            <h5 class="footer-title">Social Media</h5>
+                            <ul class="footer-share share-list list-unstyled">
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p>Copyright &copy; 2020 Lotus AI All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+    <a href="#top-page" class="to-top"><span class="ti-angle-up"></span></a>
+	
+    <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/isotope.min.js"></script>
+	<script src="assets/js/lightcase.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/jquery-easeing.min.js"></script>
+	<script src="assets/js/scroll-nav.js"></script>
+    <script src="assets/js/simpleParallax.js"></script>
+	<script src="assets/js/functions.js"></script>
+    <!-- Scripts End -->
+</body>
 </html>
