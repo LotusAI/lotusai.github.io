@@ -408,15 +408,15 @@
                     <form class="contact-form">
                         <div class="row">
                             <div class="col-lg-6 mb--30 mb-lg-0">
-                                <input type="text" name="name" placeholder="*Name" required>
-                                <input type="email" name="email" placeholder="*Email" required>
-                                <input type="text" name="subject" placeholder="*Subject" required>
+                                <input type="text" name="name" id="contact-form-name" placeholder="*Name" value="Test" required>
+                                <input type="email" name="email" id="contact-form-email" placeholder="*Email" value="test@jsnelders.com" required>
+                                <input type="text" name="subject" id="contact-form-subject" placeholder="*Subject" value="Hi!" required>
                             </div>  
                             <div class="col-lg-6">
-                                <textarea placeholder="*Massage" required></textarea>
+                                <textarea placeholder="*Message" id="contact-form-message" required>I'm in your webs</textarea>
                             </div> 
                             <div class="col-12 text-center pt--50">
-                                <button type="submit" input-type="submit" data-toggle="modal" data-target="#contactModal">Submit</button>
+                                <button type="submit" id="contact-form-submit" input-type="submit" data-toggle="modal" data-target="#contactModal">Submit</button>
                             </div> 
                         </div>
                     </form>
@@ -517,6 +517,79 @@
 	<script src="assets/js/scroll-nav.js"></script>
     <script src="assets/js/simpleParallax.js"></script>
 	<script src="assets/js/functions.js"></script>
-    <!-- Scripts End -->
+	<!-- Scripts End -->
+	
+
+
+	<!-- Test for submitting Contact form to Lotus API -->
+	<script type="text/javascript">
+		function submitContactForm()
+		{
+			//-- Get the values
+			var name = document.getElementById("contact-form-name").value;
+			var email = document.getElementById("contact-form-email").value;
+			var subject = document.getElementById("contact-form-subject").value;
+			var message = document.getElementById("contact-form-message").value;
+
+			console.log("submitContactForm():");
+			console.log("name=", name);
+			console.log("email=", email);
+			console.log("subject=", subject);
+			console.log("message=", message);
+
+			//-- Call the API
+			// 
+			var requestData = {
+				name: name,
+				email: email,
+				subject: subject,
+				message: message,
+			};
+
+			//postData('https://localhost:44393/API/SubmitLandingPageContactUsForm', requestData)
+			postData('http://lotusaitest1.azurewebsites.net/API/SubmitLandingPageContactUsForm', requestData)
+				.then(response => response.json())
+				.then(responseData => console.log("responseData=", responseData));
+		}
+
+		async function postData(url = '', data = {}) 
+		{
+			console.log("postData()", data);
+
+			// Default options are marked with *
+			const response = await fetch(url, {
+				method: 'POST',
+				mode: 'cors', // no-cors, *cors, same-origin
+				//cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+				//credentials: 'same-origin', // include, *same-origin, omit
+				headers: {
+					'Content-Type': 'application/json'
+					// 'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				//redirect: 'follow', // manual, *follow, error
+				//referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+				body: JSON.stringify(data) // body data type must match "Content-Type" header
+			});
+
+			return response;	//.json(); // parses JSON response into native JavaScript objects
+		}
+
+
+		// Bind submitContactForm() to the #contact-form-submit button click event.
+		document.addEventListener('click', function (event) {
+
+			// If the clicked element doesn't have the right selector, bail
+			if (!event.target.matches('#contact-form-submit')) return;
+
+			// Don't follow the link
+			event.preventDefault();
+
+			// Log the clicked element in the console
+			console.log("Clicked", event.target);
+
+			submitContactForm();
+
+		}, false);
+	</script>
 </body>
 </html>
