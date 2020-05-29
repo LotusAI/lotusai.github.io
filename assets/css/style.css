@@ -6468,6 +6468,27 @@ template {
 	background-color: #fff;
 	color: #e8b95a; }
 
+.nav-btn {
+  font-size: 14px;
+  padding: 10px 30px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5px;	
+  margin-left: 15px;
+  border: 2px solid #e8b95a;
+  background-color: #e8b95a;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .nav-btn:hover {
+	border: 2px solid #e8b95a;
+	background-color: transparent;
+	color: #e8b95a; }
+
 .modal-custom-btn {
   font-size: 14px;
   padding: 12px 37px;
@@ -6782,7 +6803,8 @@ template {
 .banner-image {
   position: relative; }
   .banner-image .img1 {
-    max-width: 100%; }
+    max-width: 100%; 
+}
 
 .icon-box {
   width: 125px;
