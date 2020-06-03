@@ -1,8 +1,6 @@
 # lotusai.github.io
-Public marketing website of Lotus AI
+The public landing page website for Lotus AI.
+Production deployment: https://lotusai.co
 
-
-
-# TODO
-
-Put the site behind CloudFlare or a CDN (benefit: DDoS protection)?
+The repository name **must be** "lotusai.github.io" for automatic integration with GitHub Pages.
+Commits to `master` branch are automatically deployed.
