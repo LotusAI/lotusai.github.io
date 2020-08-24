@@ -13,6 +13,7 @@
 <body class="page-sheet bg-signup-repeat">
 	<div class="bg-signup bg-signup2">
 		<div class="d-md-none w-100 mobile-image-header"></div>
+
 		<div class="container px-md-0 pt-md-5">
 			<div class="row">
 				<div class="col-md-6 col-12 pr-4">
@@ -20,30 +21,62 @@
 						<div class="col-md-1 col-0"></div>
 						<div class="col-md-11 col-12 pr-md-3 p-5">
 							<form class="form-onboarding">
-								<img src="img/dark-logo.svg" width="120" alt="logo" class="pb-5" />
+								<a href="/">
+									<img src="img/dark-logo.svg" width="120" alt="logo" class="pb-5" />
+								</a>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
 								<div class="signup-form-part-1">
 									<h4 class="yellow font-weight-lighter pb-0">Start using Lotus AI&nbsp;today</h4>
 									<p>Create an account to get started</p>
-									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
+									
+									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors.</div>
+									
 									<label for="name">Name <span class="validation-message-inline"></span></label>
 									<input type="text" name="name" placeholder="First Last" class="w-100 mb-3" />
+									
 									<label for="phone">Phone <span class="validation-message-inline"></span></label>
 									<input type="phone" name="phone" placeholder="+1 (000) 000 0000" class="w-100 mb-3" />
+
 									<label for="email1">Email Address <span class="validation-message-inline"></span></label>
 									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" />
 									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" />
+									
 									<label for="password">Password <span class="validation-message-inline"></span><label>
 									<input type="password" name="password" placeholder="password" class="w-100 mt-1 mb-3" />
+									
 									<button class="btn bg-primary w-100 mt-4 text-white mb-2" name="submit1"><img src="img/dark-rocket.svg" width="20" alt="rocket" />Get Started</button>
+									
 									<center><small><a href="#" class="yellow">Login here</a> if you already have an account</small></center>
 								</div> <!-- end signup form part 1 -->
-										
+								
+
+
+
+
+
+
+
+
+
 								<div class="signup-form-part-2" style="display: none;">
 									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>we need just a few business details</h4>
+									
 									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
+									
 									<div class="form-stages mt-3 mb-4"><div class="form-stage-icon active"></div><div class="form-stage-icon"></div></div>
+									
 									<label for="businessname">Business name <span class="validation-message-inline"></span></label>
 									<input type="text" name="businessname" placeholder="Business Name" class="w-100 mb-3" />
+									
 									<label for="abn">Australian Business Number <span class="validation-message-inline"></span></label>
 									<input type="text" name="abn" placeholder="ABN" class="w-100 mb-3" />
 									
@@ -67,10 +100,10 @@
 									<label for="billingemail">Prefered Billing Email <span class="validation-message-inline"></span></label>
 									<input type="text" name="billingemail" placeholder="your@email.com" class="w-100 mb-3" />
 									
-									 <div class="form-check mb-3">
+									<div class="form-check mb-3">
 										<input type="checkbox" class="form-check-input" id="billing-company-address-match" checked>
 										<label class="form-check-label" for="billing-company-address-match">Billing address matches company address</label>
-									  </div>
+									</div>
 									
 									<!-- billing address :: default display: hidden  -->
 									<div id="billingaddress" style="display: none;">
@@ -94,9 +127,20 @@
 									<button class="btn bg-primary mt-4 text-white mb-2 float-right" name="submit2"><img src="img/arrow-right-dark.svg" width="20" alt="next" />Next Step</button>
 									
 								</div><!-- end signup form part 2 -->
+
+
+
+
+
+
+
+
+
+
 								<div class="signup-form-part-3" style="display:none;">
 									
 									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>let’s find the best pricing for you</h4>
+
 									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
 									<div class="form-stages mt-3 mb-4"><div class="form-stage-icon active"></div><div class="form-stage-icon active"></div></div>
 									
@@ -146,6 +190,16 @@
 									<button class="btn bg-primary mt-4 text-white mb-2 float-right" name="submit3"><img src="img/arrow-right-dark.svg" width="20" alt="next" />Next Step</button>
 									
 								</div> <!-- end signup form part 3 -->
+
+
+
+
+
+
+
+
+
+
 								<div class="signup-form-part-4 text-left" style="display: none;">
 									
 									<img src="img/lotusicon.svg" height="130" class="text-left mb-4 mt-5" alt="finish signup plotus icon" />
@@ -162,382 +216,22 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+	
 	<!-- include full JQuery -->
 	<script src="https://code.jquery.com/jquery-3.1.0.js" type="text/javascript"></script>
+	
 	<!-- include number spinner -->
 	<script src="js/_bootstrap-input-spinner.js" type="text/javascript"></script>
-	<script>
-		// make the background subtly move on the right hand side
-		$(document).ready(function(){
-			
-			// animate the background to 'move' and 'change' to the two different images
-			var tid = setInterval(changefadeimages, 34000);
-			function changefadeimages() {
-			  $( ".bg-signup2" ).animate({
-				  'background-position-y': '50%'
-				}, 15000, 'swing', function(){
-					$(".bg-signup2").css('background-image', 'url(img/bg1.jpg)').animate({'background-position-y': '53%'}, 15000, 'swing', function(){
-						$( ".bg-signup2" ).css('background-image', 'url(img/bg2.jpg)');
-					});
-			   });
-			}
-			changefadeimages(); // run it... 
-
-			
-			$("button[name='submit1']").click(function(){
-				
-				// do the validation
-				validate('part1');
-				
-				// stop default submit stuff
-				return false;
-				
-			});
-			
-			$("button[name='submit2']").click(function(){
-				
-				// do the validation
-				validate('part2');
-				
-				// stop default submit stuff
-				return false;
-				
-			});
-			
-			$("button[name='submit3']").click(function(){
-				
-				// do the validation
-				validate('part3');
-				
-				// stop default submit stuff
-				return false;
-				
-			});
-			
-			//Make select text dark on change:
-			$("select").change(function(){
-				$(this).addClass('selected');
-			});
-			
-			//Show billing address if it differs from company address
-			$("#billing-company-address-match, input[for='billing-company-address-match']").click(function(){
-				if ($('#billing-company-address-match').is(':checked')) {
-					$("#billingaddress").fadeOut(500);
-				}else{
-					$("#billingaddress").fadeIn(500);
-				};
-			});
-			
-			//Make default Prefered Billing Email equal to signup email
-			$("input[name='email2']").change(function(){
-				$("input[name='billingemail']").val($("input[name='email2']").val());
-			});
-			
-			//Make default Business Address to match Billing address
-			businessfield = $("input[name='businessaddress1']");
-			businessfield2 = $("input[name='businessaddress2']");
-			businessfield3 = $("select[name='businesscountry']");
-			businessfield4 = $("select[name='businesssuburb']");
-			businessfield5 = $("input[name='businesspostcode']");
-			billingfield = $("input[name='billingaddress1']");
-			billingfield2 = $("input[name='billingaddress2']");
-			billingfield3 = $("select[name='billingcountry']");
-			billingfield4 = $("select[name='billingsuburb']");
-			billingfield5 = $("input[name='billingpostcode']");
-			$(".signup-form-part-2 input, .signup-form-part-2 select").change(function(){
-				if ($('#billing-company-address-match').is(':checked')) {
-					billingfield.val(businessfield.val());
-					billingfield2.val(businessfield2.val());
-					billingfield3.val(businessfield3.children("option:selected").val());
-						if(businessfield3.children("option:selected").val()){
-							billingfield3.addClass('selected');
-						}else{
-							billingfield3.removeClass('selected');
-						}
-					billingfield4.val(businessfield4.children("option:selected").val());
-						if(businessfield4.children("option:selected").val()){
-							billingfield4.addClass('selected');
-						}else{
-							billingfield4.removeClass('selected');
-						}
-					billingfield5.val(businessfield5.val());
-				}
-			});
-			
-			//Select payment cycle
-			$(".paymentcycle button").click(function(){
-				$(".paymentcycle button").removeClass('selected');
-				$(this).addClass('selected').blur();
-				return false;
-			});
-			
-			//Activate number spinner:
-			$("input[type='number']").inputSpinner();
-			
-			//Dynamic User Pricing
-			var costperuser = 120;
-			var finalvalue = 0;
-			var yearlydiscount = 0.1;
-			var numberofusers = 5;
-			var priceperiod = 'yearly';
-			
-			$(".btn-increment, .btn-decrement, button[name='paymentcycle-year'], button[name='paymentcycle-month']").click(function(){
-				crunchnumbers();
-			})
-			
-			function crunchnumbers(){
-				
-				// get the pricing period
-				var numberofusers = $(".form-control").val();
-				
-				if($("button[name='paymentcycle-year']").hasClass('selected')){
-					finalvalue = (numberofusers*costperuser);
-					finalvalue = finalvalue - finalvalue*yearlydiscount;
-					$("#amt-period-year").show(); $("#amt-period-month").hide();
-				}else if($("button[name='paymentcycle-month']").hasClass('selected')){
-					finalvalue = (numberofusers*costperuser)/12;
-					$("#amt-period-year").hide(); $("#amt-period-month").show();
-				}
-				
-				//apply to page
-				$("#amt-amount").html('$' + finalvalue);
-				
-			};
-
-			
-			function validate(formpart){
-				
-				var validcount = 0;
-				var field; var field2; var field3; var field4; var field5;
-				var label;
-				
-				// form part 1
-				if(formpart == 'part1'){
-					
-					validcount = 0;
-					
-					// name
-					field = $("input[name='name']");
-					label = $("label[for='name']");
-					if(field.val().length > 3){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter your full name');
-						validcount--;
-					}
-					
-					// phone
-					field = $("input[name='phone']");
-					label = $("label[for='phone']");
-					if(field.val().length > 6){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter a valid phone number');
-						validcount--;
-					}
-					
-					//email
-					field = $("input[name='email1']");
-					label = $("label[for='email1']");
-					field2 = $("input[name='email2']");
-					label2 = $("label[for='email2']");
-					var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
-					if(!pattern.test(field.val())){
-					    adderrors('- please enter a valid email address');
-						$("input[name='email2']").addClass('invalid');
-						validcount--;
-					}else{
-						validcount++;
-						if(field.val() != field2.val()){
-							adderrors('- emails do not match');
-							$("input[name='email2']").addClass('invalid');
-							validcount--; 
-						}else{
-							removeerrors();
-							$("input[name='email2']").removeClass('invalid');
-							validcount++;
-						}
-					}
-					
-					// password
-					field = $("input[name='password']");
-					label = $("label[for='password']");
-					if(field.val().length > 5){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter an email with 6 or more characters');
-						validcount--;
-					}
-					
-					// validate this part of the form
-					if(validcount == 5){
-						
-						// populate dynamic name areas
-						var dynamicName = $("input[name='name']").val().replace(/ .*/,'');
-						$(".dynamicName").html(dynamicName);
-						
-						// fade out form part 1
-						$(".signup-form-part-1").fadeOut(500);
-						$(".validation-message").fadeOut(1000);
-						$(".signup-form-part-2").delay(500).fadeIn(1000);
-						
-					}else{
-						
-						// show default validation message
-						$(".validation-message").fadeIn(500);
-						
-					}
-					
-				}; // end form part 1
-				
-				if(formpart == 'part2'){
-					
-					validcount = 0;
-					
-					// name
-					field = $("input[name='businessname']");
-					label = $("label[for='businessname']");
-					if(field.val().length > 3){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter your business name');
-						validcount--;
-					}
-					
-					// abn
-					field = $("input[name='abn']");
-					label = $("label[for='abn']");
-					if(field.val().length > 3){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter a valid ABN');
-						validcount--;
-					}
-					
-					//business address
-					label = $("label[for='businessaddress1']");
-					field = $("input[name='businessaddress1']");
-					field2 = $("input[name='businessaddress2']");
-					field3 = $("select[name='businesscountry']");
-					field4 = $("select[name='businesssuburb']");
-					field5 = $("input[name='businesspostcode']");
-					if(field.val().length > 1 && field5.val().length > 1 && field3.hasClass('selected') && field4.hasClass('selected')){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter a valid address');
-						validcount--;
-					}
-					
-					//billing address
-					label = $("label[for='billingaddress1']");
-					field = $("input[name='billingaddress1']");
-					field2 = $("input[name='billingaddress2']");
-					field3 = $("select[name='billingcountry']");
-					field4 = $("select[name='billingsuburb']");
-					field5 = $("input[name='billingpostcode']");
-					if(field.val().length > 1 && field5.val().length > 1 && field3.hasClass('selected') && field4.hasClass('selected')){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter a valid address');
-						validcount--;
-					}
-					
-					//email
-					field = $("input[name='billingemail']");
-					label = $("label[for='billingemail']");
-					var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
-					if(!pattern.test(field.val())){
-					    adderrors('- please enter a valid email address');
-						validcount--;
-					}else{
-						removeerrors();
-						validcount++;
-					}
-
-					if(validcount == 5){
-						
-						// populate dynamic name areas
-						var dynamicName = $("input[name='name']").val().replace(/ .*/,'');
-						$(".dynamicName").html(dynamicName);
-						var dynamicCompany = $("input[name='businessname']").val().replace(/ .*/,'');
-						$(".dynamicCompany").html(dynamicCompany);
-						
-						// fade out form part 1
-						$(".signup-form-part-2").fadeOut(500);
-						$(".validation-message").fadeOut(1000);
-						$(".signup-form-part-3").delay(500).fadeIn(1000);
-						
-					}else{
-						
-						// show default validation message
-						$(".validation-message").fadeIn(500);
-						
-					}
-					
-				};
-				
-				if(formpart == 'part3'){
-					
-					validcount = 0;
-					
-					//business address
-					label = $("label[for='paymentname']");
-					field = $("input[name='paymentname']");
-					field2 = $("input[name='paymentcard']");
-					field3 = $("input[name='paymentexpiration-m']");
-					field4 = $("input[name='paymentexpiration-y']");
-					field5 = $("input[name='paymentcvv']");
-					
-					if(field.val().length > 1 && field2.val().length > 15 && field3.val().length > 1 && field4.val().length > 1 && field5.val().length > 2){
-						removeerrors();
-						validcount++;
-					}else{
-						adderrors('- please enter valid card details');
-						validcount--;
-					}
-					
-					if(validcount == 1){
-						
-						// fade out form part 3
-						$(".signup-form-part-3").fadeOut(500);
-						$(".validation-message").fadeOut(1000);
-						$(".signup-form-part-4").delay(500).fadeIn(1000);
-						
-					}else{
-						
-						// show default validation message
-						$(".validation-message").fadeIn(500);
-						
-					}
-					
-				}
-				
-				// error handling
-				function removeerrors(){
-					field.removeClass('invalid');
-					label.removeClass('invalid');
-					label.children('.validation-message-inline')[0].innerHTML = '';
-				}
-					
-				function adderrors(errormessage){
-					field.addClass('invalid');
-					label.addClass('invalid');
-					label.children('.validation-message-inline')[0].innerHTML = errormessage;
-				}
-				
-			};
-			
-		});	
-	</script>
+	
+	
+	<script src="js/app.js"></script>
 </body>
 
 </html>
