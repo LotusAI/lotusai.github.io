@@ -34,24 +34,27 @@
 								
 								
 								
-								<div class="signup-form-part-1">
+								<div class="signup-form-part-1" style="display: block;">
 									<h4 class="yellow font-weight-lighter pb-0">Start using Lotus AI&nbsp;today</h4>
 									<p>Create an account to get started</p>
 									
 									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors.</div>
 									
-									<label for="name">Name <span class="validation-message-inline"></span></label>
-									<input type="text" name="name" placeholder="First Last" class="w-100 mb-3" />
+									<label for="firstName">First Name <span class="validation-message-inline"></span></label>
+									<input type="text" name="firstName" placeholder="First name" class="w-100 mb-3" value="Jason" />
+
+									<label for="lastName">Last Name <span class="validation-message-inline"></span></label>
+									<input type="text" name="lastName" placeholder="Last name" class="w-100 mb-3" value="Snelders" />
 									
 									<label for="phone">Phone <span class="validation-message-inline"></span></label>
-									<input type="phone" name="phone" placeholder="+1 (000) 000 0000" class="w-100 mb-3" />
+									<input type="phone" name="phone" placeholder="+1 (000) 000 0000" class="w-100 mb-3" value="0438 387 210" />
 
 									<label for="email1">Email Address <span class="validation-message-inline"></span></label>
-									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" />
-									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" />
+									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" value="test8@jsnelders.com" />
+									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" value="test8@jsnelders.com" />
 									
 									<label for="password">Password <span class="validation-message-inline"></span><label>
-									<input type="password" name="password" placeholder="password" class="w-100 mt-1 mb-3" />
+									<input type="password" name="password" placeholder="password" class="w-100 mt-1 mb-3" value="test1234" />
 									
 									<button class="btn bg-primary w-100 mt-4 text-white mb-2" name="submit1"><img src="img/dark-rocket.svg" width="20" alt="rocket" />Get Started</button>
 									
@@ -137,7 +140,7 @@
 
 
 
-								<div class="signup-form-part-3" style="display:none;">
+								<div class="signup-form-part-3" style="display: none;">
 									
 									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>let’s find the best pricing for you</h4>
 

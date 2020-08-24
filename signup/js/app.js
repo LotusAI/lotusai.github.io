@@ -159,22 +159,21 @@ function validate(formpart)
 	var validcount = 0;
 	var field; var field2; var field3; var field4; var field5;
 	var label;
-	var isValidForm = false;
 	
 
 	if(formpart == 'part1')
 	{
-		isValidForm = validateForm1();
+		processForm1();
 	};
 	
 	if(formpart == 'part2')
 	{
-		isValidForm = validateForm2();	
+		processForm2();	
 	};
 
 	if(formpart == 'part3')
 	{
-		isValidForm = validateForm3();
+		processForm3();
 	}
 
 
@@ -186,107 +185,160 @@ function validate(formpart)
 
 
 
-	function validateForm1()
+	function processForm1()
 	{
 		var validcount = 0;
-		var field; var field2; var field3; var field4; var field5;
-		var label;
-		var isValidForm = false;
+		// var field; var field2; var field3; var field4; var field5;
+		// var label;
 
 		validcount = 0;
 		
-		// name
-		field = $("input[name='name']");
-		label = $("label[for='name']");
-		if(field.val().length > 3)
+		// first name
+		var firstNameField = $("input[name='firstName']");
+		var firstNameLabel = $("label[for='firstName']");
+		if(firstNameField.val().length > 3)
 		{
-			removeerrors(field, label);
+			removeerrors(firstNameField, firstNameLabel);
 			validcount++;
 		}
 		else
 		{
-			adderrors('- please enter your full name', field, label);
+			adderrors('- please enter your first name', firstNameField, firstNameLabel);
+			validcount--;
+		}
+
+		// last name
+		var lastNameField = $("input[name='lastName']");
+		var lastNameLabel = $("label[for='lastName']");
+		if(lastNameField.val().length > 3)
+		{
+			removeerrors(lastNameField, lastNameLabel);
+			validcount++;
+		}
+		else
+		{
+			adderrors('- please enter your last name', lastNameField, lastNameLabel);
 			validcount--;
 		}
 		
 		// phone
-		field = $("input[name='phone']");
-		label = $("label[for='phone']");
-		if(field.val().length > 6)
+		var phoneField = $("input[name='phone']");
+		var phoneLabel = $("label[for='phone']");
+		if(phoneField.val().length > 6)
 		{
-			removeerrors(field, label);
+			removeerrors(phoneField, phoneLabel);
 			validcount++;
 		}
 		else
 		{
-			adderrors('- please enter a valid phone number', field, label);
+			adderrors('- please enter a valid phone number', phoneField, phoneLabel);
 			validcount--;
 		}
 		
 		//email
-		field = $("input[name='email1']");
-		label = $("label[for='email1']");
-		field2 = $("input[name='email2']");
-		label2 = $("label[for='email2']");
+		var email1Field = $("input[name='email1']");
+		var email1Label = $("label[for='email1']");
+		var email2Field = $("input[name='email2']");
+		var email2Label = $("label[for='email2']");
 		var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
-		if(!pattern.test(field.val()))
+		if(!pattern.test(email1Field.val()))
 		{
-			adderrors('- please enter a valid email address', field, label);
+			adderrors('- please enter a valid email address', email1Field, email1Label);
 			$("input[name='email2']").addClass('invalid');
 			validcount--;
 		}
 		else
 		{
 			validcount++;
-			if(field.val() != field2.val())
+			if(email1Field.val() != email2Field.val())
 			{
-				adderrors('- emails do not match', field, label);
+				adderrors('- emails do not match', email1Field, email1Label);
 				$("input[name='email2']").addClass('invalid');
 				validcount--; 
 			}
 			else
 			{
-				removeerrors(field, label);
+				removeerrors(email1Field, email1Label);
 				$("input[name='email2']").removeClass('invalid');
 				validcount++;
 			}
 		}
 		
 		// password
-		field = $("input[name='password']");
-		label = $("label[for='password']");
-		if(field.val().length > 8)
+		var passwordField = $("input[name='password']");
+		var passwordLabel = $("label[for='password']");
+		if(passwordField.val().length > 7)
 		{
-			removeerrors(field, label);
+			removeerrors(passwordField, passwordLabel);
 			validcount++;
 		}
 		else
 		{
-			adderrors('- please enter an email with 8 or more characters', field, label);
+			adderrors('- please enter an email with 8 or more characters', passwordField, passwordLabel);
 			validcount--;
 		}
 		
 		// validate this part of the form
-		if(validcount == 5)
+		if(validcount == 6)
 		{
-			
-			// populate dynamic name areas
-			var dynamicName = $("input[name='name']").val().replace(/ .*/,'');
-			$(".dynamicName").html(dynamicName);
-			
-			// fade out form part 1
-			$(".signup-form-part-1").fadeOut(500);
-			$(".validation-message").fadeOut(1000);
-			$(".signup-form-part-2").delay(500).fadeIn(1000);
-			
+			// Save the form.
+			saveForm1(firstNameField.val(), lastNameField.val(), phoneField.val(), email1Field.val(), passwordField.val(), function() {
+				// populate dynamic name areas
+				//var dynamicName = $("input[name='name']").val().replace(/ .*/,'');	// When we had a full name field.
+				var dynamicName = $("input[name='firstName']").val();
+				$(".dynamicName").html(dynamicName);
+				
+				// fade out form part 1
+				$(".signup-form-part-1").fadeOut(500);
+				$(".validation-message").fadeOut(1000);
+				$(".signup-form-part-2").delay(500).fadeIn(1000);
+			});
 		}
 		else
 		{
 			// show default validation message
 			$(".validation-message").fadeIn(500);
 		}
+	}
 
-		return isValidForm;
+
+
+	function saveForm1(firstName, lastName, phone, email, password, callback)
+	{
+		//-- Call the API
+		// 
+		var requestData = {
+			FirstName: firstName,
+			LastName: lastName,
+			Phone: phone,
+			Email: email,
+			Password: password
+		};
+
+		console.log("saveForm1(): requestData=", requestData);
+
+		postData('Signup/CreateFirstUserAndAccount', requestData)
+			.then(response => response.json())
+			.then(responseData => handleSubmitResponse(responseData));
+
+
+		function handleSubmitResponse(responseData)
+		{
+			console.log("saveForm1.handleSubmitResponse(): responseData=", responseData)
+
+			if (responseData.Status == "EmailExists")
+			{
+				// Validation error
+				//var validationMessage = responseData.ValidationMessage;
+				console.error("Email already exists");
+			}
+			else
+			{
+				// Success
+			}
+			
+			callback();
+		}
 	}
 
 
@@ -298,12 +350,11 @@ function validate(formpart)
 
 
 
-	function validateForm2()
+	function processForm2()
 	{
 		var validcount = 0;
 		var field; var field2; var field3; var field4; var field5;
 		var label;
-		var isValidForm = false;
 
 		validcount = 0;
 		
@@ -404,11 +455,16 @@ function validate(formpart)
 		{	
 			// show default validation message
 			$(".validation-message").fadeIn(500);
-
-			isValidForm = true;
 		}
+	}
 
-		return isValidForm;
+
+
+	function saveForm2(nameField, phoneField, email1Field, email2Field, passwordField, callback)
+	{
+		alert("saved)");
+
+		callback();
 	}
 
 
@@ -419,13 +475,11 @@ function validate(formpart)
 
 
 
-
-	function validateForm3()
+	function processForm3()
 	{
 		var validcount = 0;
 		var field; var field2; var field3; var field4; var field5;
 		var label;
-		var isValidForm = false;
 
 		validcount = 0;
 		
@@ -459,13 +513,17 @@ function validate(formpart)
 		{
 			// show default validation message
 			$(".validation-message").fadeIn(500);
-
-			isValidForm = true;
 		}
-
-		return isValidForm;
 	}
 	
+
+
+	function saveForm3(nameField, phoneField, email1Field, email2Field, passwordField, callback)
+	{
+		alert("saved)");
+
+		callback();
+	}
 
 
 
@@ -502,3 +560,38 @@ function validate(formpart)
 	}
 	
 };
+
+
+
+
+
+
+
+
+
+
+async function postData(url = '', data = {}) 
+{
+	//var apiBaseUrl = "https://lotusai-production-portal.azurewebsites.net/API/";
+	var apiBaseUrl = "https://localhost:44393/API/";
+
+	url = apiBaseUrl + url;
+	console.log("postData()", data);
+
+	// Default options are marked with *
+	const response = await fetch(url, {
+		method: 'POST',
+		mode: 'cors', // no-cors, *cors, same-origin
+		//cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+		//credentials: 'same-origin', // include, *same-origin, omit
+		headers: {
+			'Content-Type': 'application/json'
+			// 'Content-Type': 'application/x-www-form-urlencoded',
+		},
+		//redirect: 'follow', // manual, *follow, error
+		//referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+		body: JSON.stringify(data) // body data type must match "Content-Type" header
+	});
+
+	return response;	//.json(); // parses JSON response into native JavaScript objects
+}
