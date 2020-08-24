@@ -5,8 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<!-- Title -->
+		<meta name="have-i-been-pwned-verification" value="adf1f926d4d89fb03baf219a1f8a32f9">
+		
 		<title>Lotus AI - Smart Automated Time Tracking</title>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168565365-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-168565365-1');
+		</script>
 		
 		<!-- Favicon  -->
 		<link rel="icon" href="favicon.png" type="image/x-icon">
@@ -21,19 +32,21 @@
 		<link rel="stylesheet" href="assets/css/themify-icons.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<!-- Styles End -->
+
 	</head>
 
 	<body id="top-page">
 
 		<!-- Preloader -->
-		<div id="loading">
+		<!-- 22/08/2020[JS]: Hiding this. There's absolutely no reason for it. -->
+		<!-- <div id="loading">
 			<div id="loading-center">
 				<div id="loading-center-absolute">
 					<div class="object" id="first_object"></div>
 					<div class="object" id="second_object" style="float:right;"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- Preloader End -->
 
 
@@ -361,37 +374,38 @@
 
 
 		<!-- Subscribe -->
-		<!-- <section id="subscribe" class="pt--100 pb--50">
+		<section id="subscribe" class="pt--100 pb--50">
 			<div class="container">
 				<div class="container-sm">
 					<div class="section-header text-center mb--60">
 						<h3 class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">Subscribe to our mailing list</h3>
 						<p class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">Keep updated on our launch, new features and other<br> updates from Lotus AI.</p>
 					</div>
-					<form class="justify-content-center form-inline wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
+					<form id="subscribe-form" class="justify-content-center form-inline wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
 						<div class="row subscribe-email-form">
-							<input type="email" name="email" placeholder="Email Address" required>						
+							<input type="email" name="email" id="subscribe-form-email" placeholder="Email Address" required>						
 						</div>		
-						<button type="submit" class="subscribe-custom-btn" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>					
+						<button type="submit" id="subscribe-form-submit" class="subscribe-custom-btn" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>					
 					</form>
 				</div>
-			</div> -->
+			</div>
 		</section>
 			<!-- Subscribe Modal -->
 			<div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="subscribeModalLabel">Thank you for subscribing!</h5>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header" id="subscribeModalHeader">
+							<h5 class="modal-title" id="subscribeModalLabel">Thank you for subscribing!</h5>
+						</div>
+						<div class="modal-body" id="subscribeModalSuccess">
+							<p>Thank you for subscribing. You will be the first to know about new releases, giveaways, and special projects. Stay tuned.</p>
+						</div>
+						<div class="modal-body" id="subscribeModalValidation" style="display: none;"></div>
+						<div class="modal-footer" id="subscribeModalFooder">
+							<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
+						</div>
+					</div>
 				</div>
-				<div class="modal-body">
-					<p>Thank you for subscribing. You will be the first to know about new releases, giveaways, and special projects. Stay tuned.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
-				</div>
-				</div>
-			</div>
 			</div>	
 			<!-- Subscribe Modal End -->
 		<!-- Subscribe End -->
@@ -411,7 +425,7 @@
 								<div class="col-lg-6 mb--30 mb-lg-0">
 									<input type="text" name="name" id="contact-form-name" placeholder="*Name" value="" required>
 									<input type="email" name="email" id="contact-form-email" placeholder="*Email" value="" required>
-									<input type="text" name="subject" id="contact-form-subject" placeholder="*Subject" value="" required>
+									<input type="text" name="subject" id="contact-form-subject" placeholder="Subject" value="">
 								</div>  
 								<div class="col-lg-6">
 									<textarea placeholder="*Message" id="contact-form-message" required></textarea>
@@ -427,19 +441,20 @@
 		</section>
 			<!-- Contact Modal -->
 			<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="contactModalLabel">Message sent!</h5>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+					<div class="modal-header" id="contactModalHeader">
+						<h5 class="modal-title" id="contactModalLabel">Message sent!</h5>
+					</div>
+					<div class="modal-body" id="contactModalSuccess">
+						<p>Thank you for contacting us. One of our colleagues will get back in touch with you soon.</p>
+					</div>
+					<div class="modal-body" id="contactModalValidation" style="display: none;"></div>
+					<div class="modal-footer" id="contactModalFooter">
+						<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
+					</div>
+					</div>
 				</div>
-				<div class="modal-body">
-					<p>Thank you for contacting us. One of our colleagues will get back in touch with you soon.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="modal-custom-btn" data-dismiss="modal">Close</button>
-				</div>
-				</div>
-			</div>
 			</div>	
 			<!-- Contact Modal End -->
 		<!-- Contact Us End -->
@@ -524,6 +539,9 @@
 
 		<!-- Test for submitting Contact form to Lotus API -->
 		<script type="text/javascript">
+			// var apiBaseUrl = "https://localhost:44393/API/";
+			var apiBaseUrl = "https://lotusai-production-portal.azurewebsites.net/API/";
+
 			function submitContactForm()
 			{
 				//-- Get the values
@@ -547,11 +565,157 @@
 					message: message,
 				};
 
-				//postData('https://localhost:44393/API/SubmitLandingPageContactUsForm', requestData)
-				postData('https://lotusai-production-portal.azurewebsites.net/API/SubmitLandingPageContactUsForm', requestData)
+				postData(apiBaseUrl + 'SubmitLandingPageContactUsForm', requestData)
 					.then(response => response.json())
-					.then(responseData => console.log("responseData=", responseData));
+					.then(responseData => handleSubmitResponse(responseData));
+
+
+				function handleSubmitResponse(responseData)
+				{
+					console.log("responseData=", responseData)
+
+					var contactModalHeader = document.getElementById("contactModalHeader");
+					var contactModalValidation = document.getElementById("contactModalValidation");
+					var contactModalSuccess = document.getElementById("contactModalSuccess");
+
+					if (responseData.Status == "Invalid")
+					{
+						// Validation error
+						var validationMessage = responseData.ValidationMessage;
+						console.error("Invalid: ", validationMessage);
+
+						validationMessage = validationMessage.replace(/\n/g, "<br>");
+
+						// Hide the header
+						contactModalHeader.style.display = "none";
+
+						// Show the error
+						contactModalValidation.style.display = "block";
+						contactModalValidation.innerHTML = "<p style='color: #aa0000; text-align: center'>" + validationMessage + "</p>";
+
+						// Hide the success message
+						contactModalSuccess.style.display = "none";
+					}
+					else
+					{
+						// Success
+
+						// Show the header
+						contactModalHeader.style.display = "block";
+
+						// Hide the error
+						contactModalValidation.style.display = "none";
+
+						// Show the success message
+						contactModalSuccess.style.display = "block";
+					}
+
+				}
 			}
+
+
+
+			// Bind submitContactForm() to the #contact-form-submit button click event.
+			document.addEventListener('click', function (event) {
+
+				// If the clicked element doesn't have the right selector, bail
+				if (!event.target.matches('#contact-form-submit')) return;
+
+				// Don't follow the link
+				event.preventDefault();
+
+				// Log the clicked element in the console
+				console.log("Clicked", event.target);
+
+				submitContactForm();
+
+			}, false);
+
+
+
+
+
+			function submitSubscribeForm()
+			{
+				//-- Get the values
+				var email = document.getElementById("subscribe-form-email").value;
+
+				console.log("submitSubscribeForm():");
+				console.log("email=", email);
+
+				//-- Call the API
+				// 
+				var requestData = {
+					email: email,
+				};
+
+				postData(apiBaseUrl + 'SubmitLandingPageSubscribeForm', requestData)
+					.then(response => response.json())
+					.then(responseData => handleSubmitResponse(responseData));
+
+
+				function handleSubmitResponse(responseData)
+				{
+					console.log("responseData=", responseData)
+
+					var subscribeModalHeader = document.getElementById("subscribeModalHeader");
+					var subscribeModalValidation = document.getElementById("subscribeModalValidation");
+					var subscribeModalSuccess = document.getElementById("subscribeModalSuccess");
+
+					if (responseData.Status == "Invalid")
+					{
+						// Validation error
+						var validationMessage = responseData.ValidationMessage;
+						console.error("Invalid: ", validationMessage);
+
+						// Hide the header
+						subscribeModalHeader.style.display = "none";
+
+						// Show the error
+						subscribeModalValidation.style.display = "block";
+						subscribeModalValidation.innerHTML = "<p style='color: #aa0000; text-align: center'>" + validationMessage + "</p>";
+
+						// Hide the success message
+						subscribeModalSuccess.style.display = "none";
+					}
+					else
+					{
+						// Success
+
+						// Show the header
+						subscribeModalHeader.style.display = "block";
+
+						// Hide the error
+						subscribeModalValidation.style.display = "none";
+
+						// Show the success message
+						subscribeModalSuccess.style.display = "block";
+					}
+
+				}
+			}
+			
+
+
+			// Bind submitSubscribeForm() to the #subscribe-form-submit button click event.
+			document.addEventListener('click', function (event) {
+
+				// If the clicked element doesn't have the right selector, bail
+				if (!event.target.matches('#subscribe-form-submit')) return;
+
+				// Don't follow the link
+				event.preventDefault();
+
+				// Log the clicked element in the console
+				console.log("Clicked", event.target);
+
+				submitSubscribeForm();
+
+			}, false);
+
+
+
+
 
 			async function postData(url = '', data = {}) 
 			{
@@ -576,21 +740,7 @@
 			}
 
 
-			// Bind submitContactForm() to the #contact-form-submit button click event.
-			document.addEventListener('click', function (event) {
 
-				// If the clicked element doesn't have the right selector, bail
-				if (!event.target.matches('#contact-form-submit')) return;
-
-				// Don't follow the link
-				event.preventDefault();
-
-				// Log the clicked element in the console
-				console.log("Clicked", event.target);
-
-				submitContactForm();
-
-			}, false);
 		</script>
 	</body>
 </html>
