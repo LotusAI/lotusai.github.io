@@ -34,7 +34,7 @@
 								
 								
 								
-								<div class="signup-form-part-1" style="display: none;">
+								<div class="signup-form-part-1" style="display: block;">
 									<h4 class="yellow font-weight-lighter pb-0">Start using Lotus AI&nbsp;today</h4>
 									<p>Create an account to get started</p>
 									
@@ -70,7 +70,7 @@
 
 
 
-								<div class="signup-form-part-2" style="display: block;">
+								<div class="signup-form-part-2" style="display: none;">
 									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>we need just a few business details</h4>
 									
 									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
@@ -85,19 +85,30 @@
 									
 									<!-- business address -->
 									<label for="businessaddress1">Business Address <span class="validation-message-inline"></span></label>
-									<input type="text" name="businessaddress1" placeholder="Business Address" class="w-100 mb-1" />
-									<input type="text" name="businessaddress2" placeholder="Business Address" class="w-100 mb-1" />
+									<input type="text" name="businessaddress1" placeholder="Street 1" class="w-100 mb-1" />
+									<input type="text" name="businessaddress2" placeholder="Street 2" class="w-100 mb-1" />
 									<select name="businesscountry" class="w-100 mb-1">
 										<option selected disabled hidden value="">Country</option>
 										<option value="Australia">Australia</option>
+										<option value="Other">Other</option>
 									</select>
-									<div class="w-50 mb-1 float-left pr-1">
-										<select name="businesssuburb" class="w-100">
-											<option selected disabled hidden value="">Suburb</option>
+									<div class="w-100 mb-1 float-left">
+										<select name="businessstate" class="w-100">
+											<option selected disabled hidden value="">State</option>
+											<option value="ACT">ACT</option>
 											<option value="New South Wales">New South Wales</option>
+											<option value="Norther Territory">Norther Territory</option>
+											<option value="Queensland">Queensland</option>
+											<option value="South Australia">South Australia</option>
+											<option value="Tasmania">Tasmania</option>
+											<option value="Victoria">Victoria</option>
+											<option value="Western Australia">Western Australia</option>
 										</select>
 									</div>
-									<input type="text" name="businesspostcode" placeholder="Business Postcode" class="w-50 mb-3 float-left" />
+									<input type="text" name="businessstate_text" placeholder="State" class="w-100 mb-1 float-left" />
+									
+									<input type="text" name="businesscity" placeholder="Town/City/suburn" class="w-50 mb-3 float-left pr-1" />
+									<input type="text" name="businesspostcode" placeholder="Post Code" class="w-50 mb-3 float-left" />
 									<!-- end business address -->
 									
 									<label for="billingemail">Prefered Billing Email <span class="validation-message-inline"></span></label>
@@ -111,19 +122,30 @@
 									<!-- billing address :: default display: hidden  -->
 									<div id="billingaddress" style="display: none;">
 										<label for="billingaddress1">Billing Address <span class="validation-message-inline"></span></label>
-										<input type="text" name="billingaddress1" placeholder="Billing Address" class="w-100 mb-1" />
-										<input type="text" name="billingaddress2" placeholder="Billing Address" class="w-100 mb-1" />
+										<input type="text" name="billingaddress1" placeholder="Street 1" class="w-100 mb-1" />
+										<input type="text" name="billingaddress2" placeholder="Street 2" class="w-100 mb-1" />
 										<select name="billingcountry" class="w-100 mb-1">
 											<option selected disabled hidden value="">Country</option>
 											<option value="Australia">Australia</option>
+											<option value="Other">Other</option>
 										</select>
-										<div class="w-50 mb-1 float-left pr-1">
-											<select name="billingsuburb" class="w-100">
-												<option selected disabled hidden value="">Suburb</option>
+										<div class="w-100 mb-1 float-left">
+											<select name="billingstate" class="w-100">
+												<option selected disabled hidden value="">State</option>
+												<option value="ACT">ACT</option>
 												<option value="New South Wales">New South Wales</option>
+												<option value="Norther Territory">Norther Territory</option>
+												<option value="Queensland">Queensland</option>
+												<option value="South Australia">South Australia</option>
+												<option value="Tasmania">Tasmania</option>
+												<option value="Victoria">Victoria</option>
+												<option value="Western Australia">Western Australia</option>
 											</select>
 										</div>
-										<input type="text" name="billingpostcode" placeholder="Billing Postcode" class="w-50 mb-1 float-left" />
+										<input type="text" name="billingstate_text" placeholder="State" class="w-100 mb-1 float-left" />
+
+										<input type="text" name="billingcity" placeholder="Town/City/suburn" class="w-50 mb-3 float-left pr-1" />
+										<input type="text" name="billingpostcode" placeholder="Post Code" class="w-50 mb-1 float-left" />
 										</div>
 									<!-- end billing address -->
 									

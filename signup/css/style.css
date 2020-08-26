@@ -56,7 +56,8 @@ html {
 	box-shadow: none;
 	outline: 0 none;
 }
-.form-onboarding select{
+.form-onboarding select
+{
 	background-image: url("../img/dropdown.svg");
   background-position:calc(100% - 10px) 50%;
   background-size:
@@ -65,8 +66,18 @@ html {
   background-repeat: no-repeat;
   -webkit-appearance: none;
   -moz-appearance: none;
+	
+}
+.form-onboarding select
+{
 	color:rgba(0,0,0,0.15);
 }
+.form-onboarding select option
+{
+	color:rgba(0,0,0,1);
+}
+
+
 .form-onboarding select.selected{
 	color:black;
 }
