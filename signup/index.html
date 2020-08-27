@@ -50,15 +50,15 @@
 									<input type="phone" name="phone" placeholder="+1 (000) 000 0000" class="w-100 mb-3" value="0438 387 210" />
 
 									<label for="email1">Email Address <span class="validation-message-inline"></span></label>
-									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" value="test8@jsnelders.com" />
-									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" value="test8@jsnelders.com" />
+									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" value="test1@jsnelders.com" />
+									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" value="test1@jsnelders.com" />
 									
 									<label for="password">Password <span class="validation-message-inline"></span><label>
 									<input type="password" name="password" placeholder="password" class="w-100 mt-1 mb-3" value="test1234" />
 									
 									<button class="btn bg-primary w-100 mt-4 text-white mb-2" name="submit1"><img src="img/dark-rocket.svg" width="20" alt="rocket" />Get Started</button>
 									
-									<center><small><a href="#" class="yellow">Login here</a> if you already have an account</small></center>
+									<center><small><a href="https://portal.lotusai.co/login" class="yellow">Login here</a> if you already have an account</small></center>
 								</div> <!-- end signup form part 1 -->
 								
 
@@ -78,18 +78,18 @@
 									<div class="form-stages mt-3 mb-4"><div class="form-stage-icon active"></div><div class="form-stage-icon"></div></div>
 									
 									<label for="businessname">Business name <span class="validation-message-inline"></span></label>
-									<input type="text" name="businessname" placeholder="Business Name" class="w-100 mb-3" />
+									<input type="text" name="businessname" placeholder="Business Name" class="w-100 mb-3" value="Vylesk" />
 									
 									<label for="abn">Australian Business Number <span class="validation-message-inline"></span></label>
-									<input type="text" name="abn" placeholder="ABN" class="w-100 mb-3" />
+									<input type="text" name="abn" placeholder="ABN" class="w-100 mb-3" value="11 222 333 444" />
 									
 									<!-- business address -->
 									<label for="businessaddress1">Business Address <span class="validation-message-inline"></span></label>
-									<input type="text" name="businessaddress1" placeholder="Street 1" class="w-100 mb-1" />
-									<input type="text" name="businessaddress2" placeholder="Street 2" class="w-100 mb-1" />
+									<input type="text" name="businessaddress1" placeholder="Street 1" class="w-100 mb-1" value="Unit 204" />
+									<input type="text" name="businessaddress2" placeholder="Street 2" class="w-100 mb-1" value="52 Nott Street" />
 									<select name="businesscountry" class="w-100 mb-1">
 										<option selected disabled hidden value="">Country</option>
-										<option value="Australia">Australia</option>
+										<option value="Australia" selected>Australia</option>
 										<option value="Other">Other</option>
 									</select>
 									<div class="w-100 mb-1 float-left">
@@ -101,18 +101,18 @@
 											<option value="Queensland">Queensland</option>
 											<option value="South Australia">South Australia</option>
 											<option value="Tasmania">Tasmania</option>
-											<option value="Victoria">Victoria</option>
+											<option value="Victoria" selected>Victoria</option>
 											<option value="Western Australia">Western Australia</option>
 										</select>
 									</div>
-									<input type="text" name="businessstate_text" placeholder="State" class="w-100 mb-1 float-left" />
+									<input type="text" name="businessstate_text" placeholder="State" class="w-100 mb-1 float-left" value="" />
 									
-									<input type="text" name="businesscity" placeholder="Town/City/suburn" class="w-50 mb-3 float-left pr-1" />
-									<input type="text" name="businesspostcode" placeholder="Post Code" class="w-50 mb-3 float-left" />
+									<input type="text" name="businesscity" placeholder="Town/City/Suburb" class="w-50 mb-3 float-left pr-1" value="Port Melbourne" />
+									<input type="text" name="businesspostcode" placeholder="Post Code" class="w-50 mb-3 float-left" value="3207" />
 									<!-- end business address -->
 									
 									<label for="billingemail">Prefered Billing Email <span class="validation-message-inline"></span></label>
-									<input type="text" name="billingemail" placeholder="your@email.com" class="w-100 mb-3" />
+									<input type="text" name="billingemail" placeholder="your@email.com" class="w-100 mb-3" value="billing1@jsnelders.com" />
 									
 									<div class="form-check mb-3">
 										<input type="checkbox" class="form-check-input" id="billing-company-address-match" checked>
@@ -122,11 +122,11 @@
 									<!-- billing address :: default display: hidden  -->
 									<div id="billingaddress" style="display: none;">
 										<label for="billingaddress1">Billing Address <span class="validation-message-inline"></span></label>
-										<input type="text" name="billingaddress1" placeholder="Street 1" class="w-100 mb-1" />
-										<input type="text" name="billingaddress2" placeholder="Street 2" class="w-100 mb-1" />
+										<input type="text" name="billingaddress1" placeholder="Street 1" class="w-100 mb-1" value="Attn: Billing" />
+										<input type="text" name="billingaddress2" placeholder="Street 2" class="w-100 mb-1" value="10/28 Clifton Street" />
 										<select name="billingcountry" class="w-100 mb-1">
 											<option selected disabled hidden value="">Country</option>
-											<option value="Australia">Australia</option>
+											<option value="Australia" selected>Australia</option>
 											<option value="Other">Other</option>
 										</select>
 										<div class="w-100 mb-1 float-left">
@@ -138,14 +138,14 @@
 												<option value="Queensland">Queensland</option>
 												<option value="South Australia">South Australia</option>
 												<option value="Tasmania">Tasmania</option>
-												<option value="Victoria">Victoria</option>
+												<option value="Victoria" selected>Victoria</option>
 												<option value="Western Australia">Western Australia</option>
 											</select>
 										</div>
-										<input type="text" name="billingstate_text" placeholder="State" class="w-100 mb-1 float-left" />
+										<input type="text" name="billingstate_text" placeholder="State" class="w-100 mb-1 float-left" value="" />
 
-										<input type="text" name="billingcity" placeholder="Town/City/suburn" class="w-50 mb-3 float-left pr-1" />
-										<input type="text" name="billingpostcode" placeholder="Post Code" class="w-50 mb-1 float-left" />
+										<input type="text" name="billingcity" placeholder="Town/City/Suburb" class="w-50 mb-3 float-left pr-1" value="Prahran" />
+										<input type="text" name="billingpostcode" placeholder="Post Code" class="w-50 mb-1 float-left" value="3210" />
 										</div>
 									<!-- end billing address -->
 									

@@ -576,8 +576,8 @@ function validate(formpart)
 
 		console.log("submitForm(): requestData=", requestData);
 
-		callback();
-		return;	//TODO: Testing
+		// callback();
+		// return;	//TODO: Testing
 
 		postData('Signup/CreateAccountAndFirstUser', requestData)
 			.then(response => response.json())
