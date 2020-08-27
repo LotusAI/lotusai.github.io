@@ -528,6 +528,8 @@ function validate(formpart)
 			saveFormValue("BillingAddressState", businessState);
 			saveFormValue("BillingAddressPostCode", $("input[name='billingpostcode']").val());
 
+			// Disabled the submit button
+			$("button[name='submit2']").attr("disabled","disabled");
 
 			submitForm(function() {
 				// populate dynamic name areas
@@ -567,10 +569,19 @@ function validate(formpart)
 
 	
 
+	var isSubmitting = false;
 
 	function submitForm(callback)
 	{
 		// Call the API
+
+		if (isSubmitting == true)
+		{
+			// Already performing a submit
+			return;
+		}
+
+		isSubmitting = true;
 
 		var requestData = formData;	//getLocalStorage();
 
@@ -598,6 +609,8 @@ function validate(formpart)
 			{
 				// Success
 			}
+
+			isSubmitting = false;
 			
 			callback();
 		}
