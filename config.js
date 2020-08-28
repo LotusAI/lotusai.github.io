@@ -95,7 +95,7 @@ var config = {
 		if (
 			this.getCurrentDomain() == "test-portal.lotusai.co" || 
 			this.getCurrentDomain() == "lotus-portal-test.netlify.app" ||
-			this.getCurrentDomain() == "lotusai-public-test.netlify.app.app" ||
+			this.getCurrentDomain() == "lotusai-public-test.netlify.app" ||
 			this.getCurrentDomain() == "lotus-portal-develop.netlify.app"
 		)
         {
