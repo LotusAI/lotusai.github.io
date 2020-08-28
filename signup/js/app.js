@@ -774,14 +774,14 @@ function getLocalStorage()
 
 
 
-var config = {
-	//apiBaseUrl: "https://lotusai-production-portal.azurewebsites.net/API/"
-	apiBaseUrl: "https://localhost:44393/API/"
-};
+// var config = {
+// 	//apiBaseUrl: "https://lotusai-production-portal.azurewebsites.net/API/"
+// 	apiBaseUrl: "https://localhost:44393/API/"
+// };
 
 async function postData(url = '', data = {}) 
 {
-	url = config.apiBaseUrl + url;
+	url = config.GetApiBaseUrl() + "/" + url;
 	console.log("postData()", data);
 
 	// Default options are marked with *
@@ -805,7 +805,7 @@ async function postData(url = '', data = {})
 
 async function getData(url = '') 
 {
-	url = config.apiBaseUrl + url;
+	url = config.GetApiBaseUrl() + "/" + url;
 
 	// Default options are marked with *
 	const response = await fetch(url, {
