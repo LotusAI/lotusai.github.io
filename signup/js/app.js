@@ -265,7 +265,7 @@ function validate(formpart)
 		// first name
 		var firstNameField = $("input[name='firstName']");
 		var firstNameLabel = $("label[for='firstName']");
-		if(firstNameField.val().length > 3)
+		if(firstNameField.val().length > 0)
 		{
 			removeerrors(firstNameField, firstNameLabel);
 			validcount++;
@@ -279,7 +279,7 @@ function validate(formpart)
 		// last name
 		var lastNameField = $("input[name='lastName']");
 		var lastNameLabel = $("label[for='lastName']");
-		if(lastNameField.val().length > 3)
+		if(lastNameField.val().length > 0)
 		{
 			removeerrors(lastNameField, lastNameLabel);
 			validcount++;
@@ -293,7 +293,7 @@ function validate(formpart)
 		// phone
 		var phoneField = $("input[name='phone']");
 		var phoneLabel = $("label[for='phone']");
-		if(phoneField.val().length > 6)
+		if(phoneField.val().length > 7)
 		{
 			removeerrors(phoneField, phoneLabel);
 			validcount++;
