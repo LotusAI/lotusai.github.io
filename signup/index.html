@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Signup To Lotus</title>
+</head>
+
+<body class="page-sheet bg-signup-repeat">
+	<div class="bg-signup bg-signup2">
+		<div class="d-md-none w-100 mobile-image-header"></div>
+
+		<div class="container px-md-0 pt-md-5">
+			<div class="row">
+				<div class="col-md-6 col-12 pr-4">
+					<div class="row">
+						<div class="col-md-1 col-0"></div>
+						<div class="col-md-11 col-12 pr-md-3 p-5">
+							<form class="form-onboarding">
+								<a href="/">
+									<img src="img/dark-logo.svg" width="120" alt="logo" class="pb-5" />
+								</a>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<div class="signup-form-part-1" style="display: block;">
+									<h4 class="yellow font-weight-lighter pb-0">Start using Lotus AI&nbsp;today</h4>
+									<p>Create an account to get started</p>
+									
+									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors.</div>
+									
+									<label for="firstName">First Name <span class="validation-message-inline"></span></label>
+									<input type="text" name="firstName" placeholder="First name" class="w-100 mb-3" value="" />
+
+									<label for="lastName">Last Name <span class="validation-message-inline"></span></label>
+									<input type="text" name="lastName" placeholder="Last name" class="w-100 mb-3" value="" />
+									
+									<label for="phone">Phone <span class="validation-message-inline"></span></label>
+									<input type="phone" name="phone" placeholder="+1 (000) 000 0000" class="w-100 mb-3" value="" />
+
+									<label for="email1">Email Address <span class="validation-message-inline"></span></label>
+									<input type="email" name="email1" placeholder="your@email.com" class="w-100 mb-1" value="" />
+									<input type="email" name="email2" placeholder="your@email.com" class="w-100 mb-3" value="" />
+									
+									<label for="password">Password <span class="validation-message-inline"></span><label>
+									<input type="password" name="password" placeholder="password" class="w-100 mt-1 mb-3" value="" />
+									
+									<button class="btn bg-primary w-100 mt-4 text-white mb-2" name="submit1"><img src="img/dark-rocket.svg" width="20" alt="rocket" />Get Started</button>
+									
+									<center><small><a href="https://portal.lotusai.co/login" class="yellow">Login here</a> if you already have an account</small></center>
+								</div> <!-- end signup form part 1 -->
+								
+
+
+
+
+
+
+
+
+
+								<div class="signup-form-part-2" style="display: none;">
+									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>we need just a few business details</h4>
+									
+									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
+									
+									<div class="form-stages mt-3 mb-4"><div class="form-stage-icon active"></div><div class="form-stage-icon"></div></div>
+									
+									<label for="businessname">Business name <span class="validation-message-inline"></span></label>
+									<input type="text" name="businessname" placeholder="Business Name" class="w-100 mb-3" value="" />
+									
+									<label for="abn">Australian Business Number <span class="validation-message-inline"></span></label>
+									<input type="text" name="abn" placeholder="ABN" class="w-100 mb-3" value="" />
+									
+									<!-- business address -->
+									<label for="businessaddress1">Business Address <span class="validation-message-inline"></span></label>
+									<input type="text" name="businessaddress1" placeholder="Street 1" class="w-100 mb-1" value="" />
+									<input type="text" name="businessaddress2" placeholder="Street 2" class="w-100 mb-1" value="" />
+									<select name="businesscountry" class="w-100 mb-1">
+										<option selected disabled hidden value="">Country</option>
+										<option value="14"  data-country-code="AU" selected>Australia</option>
+										<option value="Other">Other</option>
+									</select>
+									<div class="w-100 mb-1 float-left">
+										<select name="businessstate" class="w-100">
+											<option selected disabled hidden value="">State</option>
+											<option value="ACT">ACT</option>
+											<option value="New South Wales">New South Wales</option>
+											<option value="Norther Territory">Norther Territory</option>
+											<option value="Queensland">Queensland</option>
+											<option value="South Australia">South Australia</option>
+											<option value="Tasmania">Tasmania</option>
+											<option value="Victoria">Victoria</option>
+											<option value="Western Australia">Western Australia</option>
+										</select>
+									</div>
+									<input type="text" name="businessstate_text" placeholder="State" class="w-100 mb-1 float-left" value="" />
+									
+									<input type="text" name="businesscity" placeholder="Town/City/Suburb" class="w-50 mb-3 float-left pr-1" value="" />
+									<input type="text" name="businesspostcode" placeholder="Post Code" class="w-50 mb-3 float-left" value="" />
+									<!-- end business address -->
+									
+									<label for="billingemail">Prefered Billing Email <span class="validation-message-inline"></span></label>
+									<input type="text" name="billingemail" placeholder="your@email.com" class="w-100 mb-3" value="" />
+									
+									<div class="form-check mb-3">
+										<input type="checkbox" class="form-check-input" id="billing-company-address-match" checked>
+										<label class="form-check-label" for="billing-company-address-match">Billing address matches company address</label>
+									</div>
+									
+									<!-- billing address :: default display: hidden  -->
+									<div id="billingaddress" style="display: none;">
+										<label for="billingaddress1">Billing Address <span class="validation-message-inline"></span></label>
+										<input type="text" name="billingaddress1" placeholder="Street 1" class="w-100 mb-1" value="" />
+										<input type="text" name="billingaddress2" placeholder="Street 2" class="w-100 mb-1" value="" />
+										<select name="billingcountry" class="w-100 mb-1">
+											<option selected disabled hidden value="">Country</option>
+											<option value="14" data-country-code="AU" selected>Australia</option>
+											<option value="Other">Other</option>
+										</select>
+										<div class="w-100 mb-1 float-left">
+											<select name="billingstate" class="w-100">
+												<option selected disabled hidden value="">State</option>
+												<option value="ACT">ACT</option>
+												<option value="New South Wales">New South Wales</option>
+												<option value="Norther Territory">Norther Territory</option>
+												<option value="Queensland">Queensland</option>
+												<option value="South Australia">South Australia</option>
+												<option value="Tasmania">Tasmania</option>
+												<option value="Victoria">Victoria</option>
+												<option value="Western Australia">Western Australia</option>
+											</select>
+										</div>
+										<input type="text" name="billingstate_text" placeholder="State" class="w-100 mb-1 float-left" value="" />
+
+										<input type="text" name="billingcity" placeholder="Town/City/Suburb" class="w-50 mb-3 float-left pr-1" value="" />
+										<input type="text" name="billingpostcode" placeholder="Post Code" class="w-50 mb-1 float-left" value="" />
+										</div>
+									<!-- end billing address -->
+									
+									<button class="btn bg-primary mt-4 text-white mb-2 float-right" name="submit2"><img src="img/arrow-right-dark.svg" width="20" alt="next" />Next Step</button>
+									
+								</div><!-- end signup form part 2 -->
+
+
+
+
+
+
+
+
+
+
+								<div class="signup-form-part-3" style="display: none;">
+									
+									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>let’s find the best pricing for you</h4>
+
+									<div class="validation-message text-white mt-4 mb-3" style="display: none;"><img src="img/light-alert.svg" width="16" class="mr-2" />Please fix the highlighted errors:</div>
+									<div class="form-stages mt-3 mb-4"><div class="form-stage-icon active"></div><div class="form-stage-icon active"></div></div>
+									
+									<label for="paymentcycle">Pay cycle <span class="validation-message-inline"></span></label>
+									<div class="w-100 float-left d-block mb-3 paymentcycle">
+										<button name="paymentcycle-month" class="w-50">Pay Monthly</button>
+										<div class="w-50 float-left pr-2">
+											<button name="paymentcycle-year" class="w-100 selected">Pay Annually<br><small class="mt-0">(saves you 10%)</small></button>
+										</div>
+									</div>
+									
+									<!-- number of users -->
+									<div class="w-100 mb-3">
+										<label for="numberofusers">Number of users</label>
+										<input placeholder="Enter a number" required type="number" value="5" min="1" max="1000" name="numberofusers" class="" />
+									</div>
+									
+									<!-- pay amount -->
+									<label for="paymentamount" class="mb-0">Amount <span class="validation-message-inline"></span></label>
+									<div class="w-100"><h2 class="d-inline-block font-weight-light yellow" id="amt-amount">$540</h2><p class="d-inline-block">/<span id="amt-period-year">year</span><span id="amt-period-month" style="display: none;">month</span></p></div>
+									
+									<!-- card details -->
+									<div class="w-100 mb-1">
+										<div class="w-50 float-left">
+											<label for="paymentname">Payment Details <span class="validation-message-inline"></span></label>
+										</div>
+										<div class="w-50 float-left text-right">
+											<label class="secured"><img src="img/Lock.svg" width="10" alt="Secure" class="" /> Secured by SSL</label>
+										</div>
+									</div>
+									<input type="text" name="paymentname" placeholder="Name" class="w-100 mb-1" />
+									<input type="text" name="paymentcard" placeholder="Card Number" class="w-100 mb-1" />
+									<div class="w-50 mb-1 float-left pr-1">
+										<div class="w-50 mb-1 float-left pr-1">
+											<input type="text" name="paymentexpiration-m" placeholder="MM" class="w-100 mb-3 float-left" maxlength="2" />
+										</div>
+										<input type="text" name="paymentexpiration-y" placeholder="YY" class="w-50 mb-3 float-left" maxlength="2" />
+									</div>
+									<input type="text" name="paymentcvv" placeholder="CVV" class="w-50 mb-3 float-left" maxlength="4" />
+									<!-- end card details -->
+									
+									<div class="form-check mb-3 float-left">
+										<input type="checkbox" class="form-check-input" id="offer-signup" checked>
+										<label class="form-check-label" for="offer-signup">Let me know more about integrating my automated timesheet data into my payroll, billing, finance and other systems</label>
+									  </div>
+									
+									<button class="btn bg-primary mt-4 text-white mb-2 float-right" name="submit3"><img src="img/arrow-right-dark.svg" width="20" alt="next" />Next Step</button>
+									
+								</div> <!-- end signup form part 3 -->
+
+
+
+
+
+
+
+
+
+
+								<div class="signup-form-part-4 text-left" style="display: none;">
+									
+									<img src="img/lotusicon.svg" height="130" class="text-left mb-4 mt-5" alt="finish signup plotus icon" />
+									
+									<h4 class="yellow font-weight-lighter pb-0">Hey <span class="dynamicName"></span>,<br>welcome to Lotus AI!</h4>
+									<p>The next step is to get your <span class="dynamicCompany"></span> staff into the Lotus system so we can begin time-tracking. We will be in touch shortly, or contact us here to get started: <a class="yellow" href="mailto:support@lotusai.co">support@lotusai.co</a>.</p>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-12"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+	
+	<!-- include full JQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.0.js" type="text/javascript"></script>
+	
+	<!-- include number spinner -->
+	<script src="js/_bootstrap-input-spinner.js" type="text/javascript"></script>
+	
+	<script src="/config.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
