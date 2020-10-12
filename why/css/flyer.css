@@ -142,6 +142,15 @@ a:hover .icon-fm{
 	background-position: center 40%;
 	min-height: 400px;
 	cursor: pointer;
+	transition: all ease 0.5s;
+}
+.showvideo.play{
+	background: black;
+	transition: all ease 0.5s;
+}
+.showvideo iframe{
+	width:100%;
+	height: 100%;
 }
 /* modal */
 .modal-dialog{

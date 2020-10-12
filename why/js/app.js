@@ -1,5 +1,17 @@
 // make the background subtly move on the right hand side
 $(document).ready(function(){
+			
+	//Video stuff:
+	var video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/UE6UkF9sABU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+	
+	$(".showvideo").click(function(){
+		if($(".showvideo").hasClass('play')){
+			// video is playing, don't do anything
+		}else{
+			$(".showvideo").addClass('play');
+			$(".showvideo .container").html(video);
+		};
+	});
 	
 	//activate the scroll function
 	$(".heroarea a").click(function(){
@@ -17,8 +29,9 @@ $(document).ready(function(){
 	//populate data
 	
 	//// CEO / Other:
-	var header1_ceo = 		'Keep track of your company&#8217;s hours without <br class="d-none d-md-block hide-small">the blah lorem ipsum dolor sit amet line for a CEO.';
-	var header2_ceo = 		'A simple closing statement to the reader, the closing reason they absolutely need Lotus.ai';
+	//var header1_ceo = 		'Keep track of your company&#8217;s hours without <br class="d-none d-md-block hide-small">the blah lorem ipsum dolor sit amet line for a CEO.';
+	var header1_ceo = 		'Auditable at a granular level, automated activity logs provide confidence that your compliance needs are covered.';
+	var header2_ceo = 		'Stop your company’s revenue contributing to the $8.8 billion lost daily in Professional Services. Speak with Lotus AI today!';
 	var parahead1_ceo = 	'The <span class="yellow">transparency</span> you need for your dispersed workforce';
 	var parahead2_ceo = 	'<span class="yellow">Compliance</span> and Customer reconciliations made simple';
 	var parahead3_ceo = 	'Leave no <br><span class="yellow">revenue</span> behind';
@@ -33,8 +46,8 @@ $(document).ready(function(){
 	var bullets3icon_ceo = 	'img/icon-shield.svg';
 	
 	//// HR:
-	var header1_hr = 		'Keep track of your company&#8217;s hours without <br class="d-none d-md-block hide-small">the blah lorem ipsum dolor sit amet line for a HR&nbsp;manager.';
-	var header2_hr = 		'A simple closing statement to the reader, the closing reason they absolutely need Lotus.ai';
+	var header1_hr = 		'Auditable at a granular level, automated activity logs provide confidence that your compliance needs are covered.';
+	var header2_hr = 		'Stop your company’s revenue contributing to the $8.8 billion lost daily in Professional Services. Speak with Lotus AI today!';
 	var parahead1_hr = 		'The <span class="yellow">transparency</span> you need for your dispersed workforce';
 	var parahead2_hr = 		'Automated productivity <span class="yellow">measurements for your organisation and staff</span>';
 	var parahead3_hr = 		'<span class="yellow">Compliance</span> and Customer reconciliations made simple';
@@ -49,8 +62,8 @@ $(document).ready(function(){
 	var bullets3icon_hr = 	'img/icon-shield.svg';
 	
 	//// Finanaces:
-	var header1_fin = 		'Keep track of your company&#8217;s hours without <br class="d-none d-md-block hide-small">the blah lorem ipsum dolor sit amet line for a Finance&nbsp;Manager.';
-	var header2_fin = 		'A simple closing statement to the reader, the closing reason they absolutely need Lotus.ai';
+	var header1_fin = 		'Auditable at a granular level, automated activity logs provide confidence that your compliance needs are covered.';
+	var header2_fin = 		'Stop your company’s revenue contributing to the $8.8 billion lost daily in Professional Services. Speak with Lotus AI today!';
 	var parahead1_fin = 	'The <span class="yellow">transparency</span> you need for your dispersed workforce';
 	var parahead2_fin = 	'<span class="yellow">Automated Timesheets</span> generating real time data providing immediate insights';
 	var parahead3_fin = 	'<span class="yellow">Compliance and Customer reconciliations</span> made simple';
