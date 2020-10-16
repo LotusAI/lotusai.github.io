@@ -1,6 +1,6 @@
 ;aiu;
 
-[2.1.11.0-x64]
+[2.8.11.0-x64]
 Name = Lotus AI Windows Agent
 ProductVersion = 2.8.11.0
 URL = https://lotusai.co/download/windows/LotusAI-WindowsAgent-x64-2.8.11.0.msi
