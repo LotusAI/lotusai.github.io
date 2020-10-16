@@ -1,0 +1,29 @@
+;aiu;
+
+[2.8.10.0-x64]
+Name = Lotus AI Windows Agent
+ProductVersion = 2.8.10.0
+URL = https://lotusai.co/download/windows/LotusAI-WindowsAgent-x64-2.8.10.0.msi
+Size = 7764480
+ReleaseDate = 16/10/2020
+SHA256 = DC4708025EA53CC3DD841F813D5AE24EF3901BBC06098ED093EB4A9AD210B3AA
+MD5 = 3cc152e243f4948815dcf6189e130286
+ServerFileName = LotusAI-WindowsAgent-x64-2.8.10.0.msi
+Flags = Os64
+RegistryKey = HKUD\Software\Lotus AI\Lotus AI Windows Agent\Version
+Version = 2.8.10.0
+Description = Second release. No changes. Testing auto updates.
+
+[2.8.9-x64]
+Name = Lotus AI Windows Agent
+ProductVersion = 2.8.9
+URL = https://lotusai.co/download/windows/LotusAI-WindowsAgent-x64-2.8.9.msi
+Size = 7291904
+ReleaseDate = 15/10/2020
+SHA256 = 2AB923AADFFB2219E9D5D9422DE6844ADD03C5ED5613F29F72F1AC061A1BF55D
+MD5 = d56d29d9cf546e40f958e90de85d41c1
+ServerFileName = LotusAI-WindowsAgent-x64-2.8.9.msi
+Flags = Os64
+RegistryKey = HKUD\Software\Lotus AI\Lotus AI Windows Agent\Version
+Version = 2.8.9
+Description = Initial release.
